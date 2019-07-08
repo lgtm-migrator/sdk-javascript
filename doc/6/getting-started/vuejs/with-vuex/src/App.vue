@@ -49,7 +49,10 @@ export default {
     const username = prompt("Please enter your name", "Harry Potter");
     this.$store.commit('SET_USERNAME', username);
     await this.$store.dispatch('INIT', { kuzzle });
-  }
+  }, 
+  async destroyed() {
+    await this.$store.dispatch('UNSUBSCRIBE_MESSAGES', { kuzzle });
+  },
 };
 </script>
 
