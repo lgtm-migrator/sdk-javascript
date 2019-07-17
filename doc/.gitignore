@@ -1,0 +1,14 @@
+/.idea
+.vuepress
+node_modules
+dist
+algolia-records.json
+frontmatter-errors.json
+frontmatter-fixes.json
+test/bin/*
+/reports/*.json
+/reports/failed/*.*
+dead_links.json
+links_failed.json
+.links_checked.json
+.vscode
