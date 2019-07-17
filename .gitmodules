@@ -1,3 +1,6 @@
 [submodule "features/features"]
 	path = features/features
 	url = https://github.com/kuzzleio/sdk-features.git
+[submodule ".doc-vuepress"]
+	path = .doc-vuepress
+	url = git@github.com:kuzzleio/documentation.git
