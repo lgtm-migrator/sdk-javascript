@@ -181,14 +181,21 @@ class HttpWrapper extends KuzzleAbstractProtocol {
 
       return;
     }
+    
 
     const
-      method = route.verb,
       regex = /\/:([^/]*)/;
 
     let
+      method = route.verb,
       url = route.url,
       matches = regex.exec(url);
+    
+    //nice fix
+    if (data.controller === 'document' && data.action === 'search') {
+      url = '/:index/:collection/_search';
+      method = 'POST';
+    }
 
     while (matches) {
       url = url.replace(regex, '/' + data[ matches[1] ]);
