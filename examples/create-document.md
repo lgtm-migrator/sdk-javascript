@@ -4,7 +4,12 @@ Use the `document` controller to creates new documents.
 
 Just provide an index, a collection and the document body.  
 
+### Common mistakes
+
+
 ### Example
+
+**Prepare your Kuzzle**
 
 ```bash
 # Creates an index
@@ -13,6 +18,8 @@ $ kourou query index:create -a index=nyc-open-data
 # Creates a collection
 $ kourou query collection:create -a index=nyc-open-data -a collection=yellow-taxi
 ```
+
+**Run the snippet**
 
 ```js
 const { Kuzzle, Http } = require('kuzzle-sdk');

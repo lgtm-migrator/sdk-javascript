@@ -4,7 +4,15 @@ Use the `document` controller `search` method to search for documents.
 
 This method directly takes Elasticsearch queries so just ask what you need and Kuzzle will give it to you.
 
+### Common mistakes
+
+**My query does not returns any result**
+ - Did you apply the correct mapping on the collection?
+ - Did you wait for the collection to refresh?
+
 ### Example
+
+**Prepare your Kuzzle**
 
 ```bash
 # Creates an index
@@ -16,6 +24,8 @@ $ kourou query collection:create -a index=nyc-open-data -a collection=yellow-tax
 # Creates 10 documents
 $ for i in `seq 10`; do kourou document:create nyc-open-data yellow-taxi --body "{ \"age\": $i }"; done
 ```
+
+**Run the snippet**
 
 ```js
 const { Kuzzle, Http } = require('kuzzle-sdk');
