@@ -6,7 +6,7 @@ This method directly takes Elasticsearch queries so just ask what you need and K
 
 ### Common mistakes
 
-**My query does not returns any result**
+*My query does not returns any result*
  - Did you apply the correct mapping on the collection?
  - Did you wait for the collection to refresh?
 
