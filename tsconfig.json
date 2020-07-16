@@ -12,8 +12,7 @@
         "node_modules/*",
         "src/types/*"
       ]
-    },
-    "sourceType": "module"
+    }
   },
   "rootDir": "src/",
   "include": [
