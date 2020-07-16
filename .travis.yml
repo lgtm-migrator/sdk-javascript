@@ -12,7 +12,7 @@ jobs:
       name: Unit Tests
       if: type = pull_request OR type = push AND branch =~ /^master|[0-9]+-(dev|stable|beta)$/ OR type = cron
       language: node_js
-      node_js: 10
+      node_js: 12
 
       env:
         # Codecov token
@@ -44,7 +44,7 @@ jobs:
       name: Integration Tests
       if: type = pull_request OR type = push AND branch =~ /^master|[0-9]+-(dev|stable|beta)$/ OR type = cron
       language: node_js
-      node_js: 10
+      node_js: 12
 
       addons:
         apt:
@@ -71,7 +71,7 @@ jobs:
       name: Documentation Tests
       if: type = pull_request OR type = push AND branch =~ /^master|[0-9]+-(dev|stable|beta)$/ OR type = cron
       language: node_js
-      node_js: 10
+      node_js: 12
 
       before_script:
         - sudo apt-get install libgconf-2-4
@@ -99,7 +99,7 @@ jobs:
       name: Deploy next-docs.kuzzle.io
       if: type = push AND branch =~ /^[0-9]+-dev$/
       language: node_js
-      node_js: 10
+      node_js: 12
       env:
         - BRANCH=dev
         - NODE_ENV=production
@@ -137,7 +137,7 @@ jobs:
       name: Deploy docs.kuzzle.io
       if: type = push AND branch =~ /^master|[0-9]+-stable$/
       language: node_js
-      node_js: 10
+      node_js: 12
       env:
         - NODE_ENV=production
         - S3_BUCKET=docs.kuzzle.io
@@ -174,7 +174,7 @@ jobs:
       if: type = push AND branch = master
       sudo: false
       language: node_js
-      node_js: 10
+      node_js: 12
 
       addons:
         apt:
@@ -208,7 +208,7 @@ jobs:
       if: type = push AND branch =~ /^[0-9]+-stable$/
       sudo: false
       language: node_js
-      node_js: 10
+      node_js: 12
 
       addons:
         apt:
@@ -242,7 +242,7 @@ jobs:
       if: type = push AND branch =~ /^[0-9]+-beta$/
       sudo: false
       language: node_js
-      node_js: 10
+      node_js: 12
 
       addons:
         apt:

@@ -2,6 +2,7 @@
 src/**/*.d.ts
 src/**/*.js.map
 
+index.js
 src/Kuzzle.js
 src/controllers/Auth.js
 src/controllers/Base.js
