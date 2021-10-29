@@ -3,7 +3,7 @@
 //
 // cf amazing https://gist.github.com/jed/982883
 
-const uuidv4 = a => a
+export const uuidv4 = a => a
   ? (
     a ^
     Math.random()

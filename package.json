@@ -33,8 +33,10 @@
     "dev": "node -r ts-node/register ",
     "doc-testing": "bash .ci/test-docs.sh"
   },
+  "type": "module",
   "browser": "dist/kuzzle.js",
   "main": "index.js",
+  "exports": "./index.js",
   "license": "Apache-2.0",
   "dependencies": {
     "min-req-promise": "^1.0.1",
@@ -73,7 +75,7 @@
     "webpack-cli": "^4.8.0"
   },
   "engines": {
-    "node": ">= 10.13.0"
+    "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
   },
   "files": [
     "dist/**/*",

@@ -1,6 +1,6 @@
 'use strict';
 
-class PendingRequest {
+export class PendingRequest {
   constructor(request) {
     this._resolve = null;
     this._reject = null;

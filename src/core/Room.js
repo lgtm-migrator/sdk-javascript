@@ -1,6 +1,6 @@
 'use strict';
 
-class Room {
+export default class Room {
 
   /**
    * @param {RealtimeController} controller

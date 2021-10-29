@@ -73,7 +73,7 @@ const getPropertyNames = obj => {
 
 const deleteDuplicates = arr => [...new Set(arr)];
 
-const proxify = (obj, opts = {}) => {
+export const proxify = (obj, opts = {}) => {
   if (!obj || (typeof obj !== 'object' && typeof obj !== 'function')) {
     throw Error('proxify only applies on non-null object');
   }

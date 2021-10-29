@@ -188,7 +188,7 @@ const commands = {
  * @param {object} kuzzle - Kuzzle instance to inherit from
  * @constructor
  */
-class MemoryStorageController extends BaseController {
+export class MemoryStorageController extends BaseController {
 
   constructor (kuzzle) {
     super(kuzzle, 'ms');

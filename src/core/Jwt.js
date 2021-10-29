@@ -26,7 +26,7 @@ const decodeBase64 = input => {
   return output;
 };
 
-class Jwt {
+export class Jwt {
   constructor (encodedJwt) {
     this._encodedJwt = encodedJwt;
 
