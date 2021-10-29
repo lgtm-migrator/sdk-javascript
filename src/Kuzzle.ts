@@ -19,6 +19,8 @@ import { RequestPayload } from './types/RequestPayload';
 import { ResponsePayload } from './types/ResponsePayload';
 import { RequestTimeoutError } from './RequestTimeoutError';
 
+import thisPackage from '../package.json';
+
 // Defined by webpack plugin
 declare const SDKVERSION: any;
 
@@ -233,8 +235,7 @@ export class Kuzzle extends KuzzleEventEmitter {
       : 200;
 
     this.sdkVersion = typeof SDKVERSION === 'undefined'
-      // eslint-disable-next-line @typescript-eslint/no-var-requires
-      ? require('../package').version
+      ? thisPackage.version
       : SDKVERSION;
 
     this.sdkName = `js@${this.sdkVersion}`;

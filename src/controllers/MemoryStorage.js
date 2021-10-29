@@ -1,4 +1,4 @@
-const { BaseController } = require('./Base');
+import { BaseController } from './Base';
 
 // Parameter mutualization
 const getId = {getter: true, required: ['_id']};
